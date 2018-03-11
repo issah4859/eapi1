@@ -8,11 +8,11 @@ class product extends Model
 {
     //
 
-    public function reviews()
+    public function Reviews()
 
     {
 
-        return $this->hasMany(Reviews::class);
+        return $this->hasMany(\App\model\Review::class);
 
     }
 
