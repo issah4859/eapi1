@@ -11,7 +11,7 @@ class Review extends Model
 
     {
 
-        return $this->belongsTo(\App\Model\Product::class);
+        return $this->belongsTo(\App\model\Product::class);
 
     }
 
