@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use \App\Http\Reviews;
+use \App\Http\Resources\ReviewResource;
 use App\model\Review;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Product;
+
+
 
 class ReviewController extends Controller
 {
@@ -12,9 +17,13 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function index(\App\model\product $product)
     {
         //
+
+        return ReviewResource::collection($product->Reviews);
+
     }
 
     /**
